@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&family=Inter:wght@400;500&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-round.png" type="image/x-icon">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Шапка и Навигация -->
+    <header class="top-nav">
+        <div class="logo">MY.</div>
+        <div class="burger-menu" id="burger-menu" role="button" aria-label="Navigationsmenü öffnen" tabindex="0">
+            <span></span><span></span><span></span>
+        </div>
+        <nav class="main-nav" id="main-nav">
+            <button class="nav-btn active hover-target" data-target="page-home">Startseite</button>
+            <button class="nav-btn hover-target" data-target="page-about">Über mich & Lebenslauf</button>
+            <button class="nav-btn hover-target" data-target="page-projects">Projekte</button>
+        </nav>
+        <div class="lang-switch">
+            <a href="index.html" class="hover-target">EN</a>
+            <a href="index_de.html" class="active hover-target">DE</a>
+            <a href="index_ua.html" class="hover-target">UA</a>
+            <a href="index_ru.html" class="hover-target">RU</a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- ================= СТРАНИЦА: ГЛАВНАЯ (Bento Grid) ================= -->
+        <section id="page-home" class="page-section active">
+            <div class="hero">
+                <h1 class="huge-text">MYKHAILO<br>YEROMENKO</h1>
+                <div class="hero-bottom">
+                    <p>Softwareentwickler & Informatikstudent in Chemnitz, Deutschland. Fokus auf strikte OOP und komplexe Logik.</p>
+                </div>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Кратко о себе -->
+                <div class="bento-card span-2 reveal">
+                    <h3>Architektur & Logik.</h3>
+                    <p>Ich konzentriere mich auf skalierbare objektorientierte Architekturen, strikte mathematische Modelle und saubere Backend-Logik. Ich erforsche die Brücke zwischen komplexen Systemen und interaktiven Web-Apps.</p>
+                </div>
+                <!-- Стек -->
+                <div class="bento-card reveal tech-card">
+                    <h3>Stack</h3>
+                    <div class="tags">
+                        <span>C++</span><span>Java</span><span>C#</span><span>Python</span><span>JS</span><span>Linux</span>
+                    </div>
+                </div>
+                <div class="bento-card reveal contact-card">
+                    <a target="_blank" href="https://t.me/Petryshka229" class="hover-target">Kontakt ↗</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= СТРАНИЦА: ОБО МНЕ & CV ================= -->
+        <section id="page-about" class="page-section">
+            <div class="about-grid">
+                <!-- Мотивационное письмо -->
+                <article class="motivation-section reveal">
+                    <h2>Über mich</h2>
+                    <p>Ich betrachte die Softwareentwicklung als eine strukturelle Disziplin. Mein Hauptaugenmerk liegt auf der Erstellung skalierbarer, objektorientierter Architekturen und komplexer Backend-Logik.</p>
+                    <p>Über die akademischen Anforderungen hinaus entwickle ich aktiv interaktive Anwendungen und Simulationen. Ob es darum geht, einen mathematischen Kern zu strukturieren oder webbasierte Tools für Tabletop-Spiele wie Dungeons & Dragons zu entwerfen – ich lege stets Wert auf Code-Wartbarkeit und strikte Logikmuster.</p>
+                    <p>Derzeit bin ich auf der Suche nach Möglichkeiten, mein Wissen in einer professionellen F&E- oder Backend-Entwicklungsumgebung anzuwenden.</p>
+                </article>
+
+                <!-- Резюме (CV) -->
+                <article class="cv-section reveal">
+                    <h2>Lebenslauf</h2>
+                    <div class="cv-item">
+                        <span class="cv-date">Okt 2026 — Heute</span>
+                        <h3>Technische Universität Chemnitz</h3>
+                        <p>B.Sc. Informatik (Wintersemester 2026/2027)</p>
+                    </div>
+                    <div class="cv-item">
+                        <span class="cv-date">2022 — 2024</span>
+                        <h3>V. N. Karazin Kharkiv National University</h3>
+                        <p>Informatik (4 Semester absolviert)</p>
+                    </div>
+                    <div class="cv-item">
+                        <span class="cv-date">Sprachen</span>
+                        <p>Ukrainisch (Muttersprache), Russisch (Muttersprache), Deutsch (B2), Englisch.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ================= СТРАНИЦА: ПРОЕКТЫ ================= -->
+        <section id="page-projects" class="page-section">
+            <div class="projects-header reveal">
+                <h2>Ausgewählte Projekte</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active hover-target" data-filter="all">Alle</button>
+                    <button class="filter-btn hover-target" data-filter="university">Universität</button>
+                    <button class="filter-btn hover-target" data-filter="courses">Kurse</button>
+                    <button class="filter-btn hover-target" data-filter="hobby">Hobby</button>
+                    <button class="filter-btn hover-target" data-filter="work">Arbeit</button>
+                    <button class="filter-btn hover-target" data-filter="games">Spiele</button>
+                </div>
+            </div>
+
+            <div class="projects-gallery">
+                <article class="advanced-project-card reveal" data-category="university">
+                <div class="project-preview">
+                    <img src="lab001.jpg" alt="Lab 001 Preview" class="preview-img">
+                    <div class="project-links">
+                    <a href="https://misha1290.github.io/lab001/" class="btn-primary hover-target" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+                    <a href="https://github.com/misha1290/lab001" class="btn-secondary hover-target" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <span class="category">Universitätsprojekt</span>
+                    <h3>HTML5 Web-Architektur</h3>
+                    <p class="tech-stack">HTML5 • Semantisches Markup</p>
+                    <p class="description">
+                    Ein akademisches Projekt mit Fokus auf die grundlegenden Prinzipien der Erstellung von Webseiten unter Verwendung moderner HTML5-Standards und Client-Server-Architekturkonzepte.
+                    </p>
+
+                    <div class="features-block">
+                    <h4>Hauptmerkmale & Highlights:</h4>
+                    <ul>
+                        <li><strong>Semantische Strukturierung:</strong> Verwendet Standard-Struktur-Tags wie <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> und <code>&lt;footer&gt;</code> für einen barrierefreien Dokumentenfluss.</li>
+                        <li><strong>Native Multimedia-Integration:</strong> Bindet lokale Video- und Audiodateien direkt über HTML5 <code>&lt;video&gt;</code> und <code>&lt;audio&gt;</code> Tags mit integrierten Steuerelementen ein.</li>
+                        <li><strong>Code-Dokumentation:</strong> Nutzt <code>&lt;pre&gt;</code> und <code>&lt;code&gt;</code> Blöcke, um rohe HTML-Beispiele innerhalb der Seite darzustellen.</li>
+                    </ul>
+                    </div>
+
+                    <div class="code-viewer">
+                    <div class="code-header">
+                        <div class="mac-btns">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        </div>
+                        <span class="filename">index.html</span>
+                    </div>
+                    <pre><code>&lt;!-- Native video embedding with fallback --&gt;
+    &lt;section&gt;
+        &lt;p&gt;Вивід відео за допомогою тегу &amp;lt;video&amp;gt;&lt;/p&gt;
+        &lt;video width="600" height="400" controls&gt;
+            &lt;source src="videolabs.mp4" type="video/mp4"&gt;
+            Ваш браузер не підтримує відтворення відео.
+        &lt;/video&gt;
+    &lt;/section&gt;</code></pre>
+                    </div>
+                </div>
+                </article>
+        <!-- BEAUTY-LAB -->
+                <article class="advanced-project-card reveal" data-category="work">
+                    <div class="project-preview">
+                        <img src="BeautyLab.jpg" alt="Beauty Lab Chemnitz" class="preview-img">
+                        <div class="project-links">
+                        <a href="https://misha1290.github.io/-BEAUTY-LAB/" class="btn-primary hover-target" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+                        <a href="https://github.com/misha1290/-BEAUTY-LAB" class="btn-secondary hover-target" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <span class="category">Kommerziell / Landing Page</span>
+                        <h3>Beauty Lab</h3>
+                        <p class="tech-stack">Vanilla JS • Tailwind CSS • Fetch API</p>
+                        <p class="description">
+                        Eine hochwertige, zweisprachige (RU/DE) Landing Page, entwickelt für ein ästhetisches Zentrum in Deutschland. Das Projekt bietet dynamisches DOM-Rendering, scroll-ausgelöste Animationen und ein serverloses Lead-Capture-System, das mit Telegram integriert ist.
+                        </p>
+
+                        <div class="features-block">
+                        <h4>Hauptmerkmale & Highlights:</h4>
+                        <ul>
+                            <li><strong>Serverlose Formularübermittlung:</strong> Weiterleitung von Buchungsanfragen an einen Telegram-Bot via Google Apps Script unter expliziter Umgehung von CORS-Preflight-Beschränkungen.</li>
+                            <li><strong>Zustandsspeicherung (UX):</strong> Nutzung von <code>localStorage</code>, um Benutzereingaben über Sitzungen hinweg vorübergehend zu speichern und Datenverlust bei versehentlichem Neuladen der Seite zu verhindern.</li>
+                            <li><strong>Zweisprachige Architektur:</strong> Dynamischer Sprachwechsel (Russisch/Deutsch), implementiert über ein benutzerdefiniertes JS-Wörterbuch und DOM-Traversing, ohne die Seite neu zu laden.</li>
+                            <li><strong>Leistung:</strong> Striktes Styling mit Tailwind CSS und Animationen mithilfe der nativen <code>IntersectionObserver</code> API für optimale Rendering-Geschwindigkeit.</li>
+                        </ul>
+                        </div>
+
+                        <div class="code-viewer">
+                        <div class="code-header">
+                            <div class="mac-btns">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            </div>
+                            <span class="filename">telegram-api.js</span>
+                        </div>
+                        <pre><code>// Asynchronous lead capture & CORS handling
+        const GOOGLE_APP_URL = 'https://script.google.com/macros/s/.../exec'; 
+
+        async function sendToTelegram(message, inputIdsToClear) {
+            try {
+                const response = await fetch(GOOGLE_APP_URL, {
+                    method: 'POST',
+                    // Using text/plain to avoid CORS preflight issues in Google Script
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify({ message: message })
+                });
+                
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    showSuccessModal();
+                    clearFormStorage(inputIdsToClear); // Clears localStorage upon success
+                } else {
+                    console.error('Server Error:', result.message);
+                }
+            } catch (error) {
+                console.error('Network Error:', error);
+            }
+        }</code></pre>
+                        </div>
+                    </div>
+                </article>
+                <!-- Time Sync Manager -->
+                <article class="advanced-project-card reveal" data-category="hobby">
+                    <div class="project-preview">
+                        <img src="Cat.jpg" alt="Time Sync Manager Preview" class="preview-img">
+                        <div class="project-links">
+                        <a href="https://misha1290.github.io/cat/" class="btn-primary hover-target" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+                        <a href="https://github.com/misha1290/cat" class="btn-secondary hover-target" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <span class="category">Hobby / Utility App</span>
+                        <h3>Time Sync Manager & Shop</h3>
+                        <p class="tech-stack">JavaScript (ES6+) • Fetch API • LocalStorage</p>
+                        <p class="description">
+                        Eine Webanwendung mit einem Countdown-Timer, der mit einer globalen Zeit-API synchronisiert ist. Sie enthält ein virtuelles Geschäft, in dem Benutzer zeitverändernde Power-Ups kaufen oder verwenden können.
+                        </p>
+
+                        <div class="features-block">
+                        <h4>Hauptmerkmale & Highlights:</h4>
+                        <ul>
+                            <li><strong>Server-Zeit-Synchronisation:</strong> Ruft Echtzeit-UTC-Daten von <code>worldtimeapi.org</code> ab, um clientseitige Uhrenabweichungen anzupassen und Manipulationen zu verhindern.</li>
+                            <li><strong>Persistente Zustandsverwaltung:</strong> Verwendet <code>localStorage</code>, um die Endzeit des Timers, Pausenmomente und das Shop-Inventar (Gegenstände wie Zeit-Einfrierungen) über Browser-Neuladevorgänge hinweg zu speichern.</li>
+                            <li><strong>Dynamische UI-Aktualisierungen:</strong> Berechnet Stunden, Minuten und Sekunden dynamisch und behandelt das Löschen von Intervallen, wenn der Timer null erreicht.</li>
+                        </ul>
+                        </div>
+
+                        <div class="code-viewer">
+                        <div class="code-header">
+                            <div class="mac-btns">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            </div>
+                            <span class="filename">timer-sync.js</span>
+                        </div>
+                        <pre><code>// Fetching real UTC time to prevent client-side cheating
+        async function getServerTime() {
+        try {
+            const response = await fetch("https://worldtimeapi.org/api/ip");
+            const data = await response.json();
+            return new Date(data.utc_datetime);
+        } catch (error) {
+            console.error("API Error:", error);
+            return new Date(); // fallback: local time
+        }
+        }</code></pre>
+                        </div>
+                    </div>
+                </article>
+        <!-- 1. SeptaBank -->
+                <article class="advanced-project-card reveal" data-category="courses">
+                    <div class="project-preview">
+                        <img src="Bank.jpg" alt="SeptaBank UI Preview" class="preview-img">
+                        <div class="project-links">
+                        <a href="https://misha1290.github.io/SeptaBank/" class="btn-primary hover-target" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+                        <a href="https://github.com/misha1290/SeptaBank" class="btn-secondary hover-target" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <span class="category">Kursprojekt / Frontend UI</span>
+                        <h3>SeptaBank Landing</h3>
+                        <p class="tech-stack">Vanilla JS • CSS 3D Transforms • AOS</p>
+                        <p class="description">
+                        Eine visuell ansprechende Landing Page, entworfen für ein fiktives Finanzinstitut. Der Hauptfokus liegt auf einer reibungslosen Benutzererfahrung mit gesteuerten Preloader-Sequenzen, scroll-gesteuerten Enthüllungen und komplexen CSS-Architekturen für 3D-Elemente.
+                        </p>
+
+                        <div class="features-block">
+                        <h4>Wichtige technische Highlights:</h4>
+                        <ul>
+                            <li><strong>Timeout-Preloader:</strong> Ein benutzerdefinierter, JS-gesteuerter Ladebildschirm, der den Overflow blockiert, bis das DOM vollständig bereit ist, und reibungslos über CSS-Klassen ausgeblendet wird.</li>
+                            <li><strong>3D-Karten-Interaktionen:</strong> Implementierung realistischer Kreditkartenkomponenten mit erweiterten CSS-Eigenschaften wie <code>transform-style: preserve-3d</code> und <code>rotateY</code>.</li>
+                            <li><strong>Scroll-Animationen:</strong> Integration der AOS-Bibliothek für performante, intersectionsbasierte Fade- und Zoom-Effekte auf Inhaltsblöcken.</li>
+                        </ul>
+                        </div>
+
+                        <div class="code-viewer">
+                        <div class="code-header">
+                            <div class="mac-btns">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            </div>
+                            <span class="filename">loader.js</span>
+                        </div>
+                        <pre><code>// Preloader & overflow control sequence
+        let loader = document.querySelector('.loading');
+        let body = document.querySelector('body');
+
+        window.addEventListener('load', function() {
+            loader.classList.add('tuck');
+            body.classList.add('tuck'); // Enables scrolling
+            
+            setTimeout(function() {
+                loader.classList.remove('tuck');
+                body.classList.remove('tuck');
+            }, 1000);
+        });</code></pre>
+                        </div>
+                    </div>
+                </article>
+                <!-- 2. Gildia -->
+                <article class="advanced-project-card reveal" data-category="hobby">
+                    <div class="project-preview">
+                        <img src="Gildia.jpg" alt="Adventurers Guild Preview" class="preview-img">
+                        <div class="project-links">
+                        <a href="https://misha1290.github.io/Gildia/" class="btn-primary hover-target" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+                        <a href="https://github.com/misha1290/Gildia" class="btn-secondary hover-target" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <span class="category">Hobby / Tabletop Tool</span>
+                        <h3>Adventurers Guild Board</h3>
+                        <p class="tech-stack">JavaScript (ES6) • DOM Manipulation • CSS</p>
+                        <p class="description">
+                        Ein immersives, interaktives Quest-Board, das entwickelt wurde, um Homebrew D&D-Kampagnen zu verfolgen. Es parst Arrays von Quest- und Charakterdaten, um dynamisch ein zufälliges, organisch aussehendes schwarzes Brett und eine Rangliste zu generieren.
+                        </p>
+
+                        <div class="features-block">
+                        <h4>Wichtige technische Highlights:</h4>
+                        <ul>
+                            <li><strong>Dynamische HTML-Injektion:</strong> Durchlaufen von Daten-Arrays, um komplexe DOM-Elemente on-the-fly mittels Template-Literalen zu konstruieren und anzuhängen.</li>
+                            <li><strong>Organische algorithmische UI:</strong> Simulation eines physischen schwarzen Bretts durch Anwendung einer zufälligen CSS-Rotation (zwischen -4 und 4 Grad) auf jede gerenderte Quest-Karte.</li>
+                            <li><strong>Komplexes Styling:</strong> Erstellung einer Fantasy-Ästhetik unter Verwendung von gestapelten linearen und radialen Farbverläufen, benutzerdefinierten Web-Schriftarten und mehrschichtigen Box-Shadows.</li>
+                        </ul>
+                        </div>
+
+                        <div class="code-viewer">
+                        <div class="code-header">
+                            <div class="mac-btns">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            </div>
+                            <span class="filename">render-quests.js</span>
+                        </div>
+                        <pre><code>// Dynamic rendering with randomized rotation
+        quests.forEach(quest =&gt; {
+            const notice = document.createElement('div');
+            notice.classList.add('notice');
+            
+            // Applying random tilt (-4 to 4 degrees)
+            const rotation = (Math.random() * 8) - 4;
+            notice.style.transform = `rotate(${rotation}deg)`;
+
+            let marksHtml = quest.marks &gt; 0 
+                ? `&lt;div class="marks"&gt;${'🔴'.repeat(quest.marks)}&lt;/div&gt;` 
+                : '';
+
+            notice.innerHTML = `
+                &lt;h2&gt;${quest.title}&lt;/h2&gt;
+                &lt;span class="highlight"&gt;XP: ${quest.xp}&lt;/span&gt;
+                &lt;p&gt;${quest.desc}&lt;/p&gt;
+                &lt;span class="highlight"&gt;Reward: ${quest.reward}&lt;/span&gt;
+                ${marksHtml}
+            `;
+            
+            board.appendChild(notice);
+        });</code></pre>
+                        </div>
+                    </div>
+                </article>
+                <!-- Kingdom Game -->
+                <article class="advanced-project-card reveal" data-category="hobby games">
+                    <div class="project-preview">
+                        <img src="kingdom.png" alt="Kingdom Game Preview" class="preview-img">
+                        <div class="project-links">
+                        <a href="https://misha1290.github.io/kingdom/" class="btn-primary hover-target" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+                        <a href="https://github.com/misha1290/kingdom" class="btn-secondary hover-target" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <span class="category">Hobby / Web-Spiel</span>
+                        <h3>Kingdom: Royal Defense</h3>
+                        <p class="tech-stack">Vanilla JS • HTML5 Audio • DOM</p>
+                        <p class="description">
+                        Ein browserbasiertes interaktives Story- und Strategiespiel. Spieler verwalten Truppenstärken und Taktiken, um einen Aufstand niederzuschlagen, mit verzweigten Handlungssträngen, versteckten Lore-Modals und einer benutzerdefinierten ziehbaren Radio-Schnittstelle für Hintergrundmusik.
+                        </p>
+
+                        <div class="features-block">
+                        <h4>Wichtige technische Highlights:</h4>
+                        <ul>
+                            <li><strong>Benutzerdefinierter Media Player:</strong> Implementierung einer ziehbaren Radio-UI, bei der die Position des Schiebereglers dynamisch den aktuell spielenden Audiotrack berechnet und ändert.</li>
+                            <li><strong>Spiel-Logik & Ergebnisse:</strong> Entwicklung eines Kampfbeschreibungssystems, das Benutzerentscheidungen und zufällige Feindstärke vergleicht, um Sieg oder Niederlage zu bestimmen.</li>
+                            <li><strong>CSS State Management:</strong> Nutzung des nativen Checkbox-Hacks (Pseudoklassen), um komplexe versteckte UI-Elemente und Lore-Modals umzuschalten, ohne sich vollständig auf JavaScript zu verlassen.</li>
+                        </ul>
+                        </div>
+
+                        <div class="code-viewer">
+                        <div class="code-header">
+                            <div class="mac-btns">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            </div>
+                            <span class="filename">radio-drag.js</span>
+                        </div>
+                        <pre><code>// Handling draggable radio slider and track switching
+        draggable.onmousedown = function(event) {
+            isDragging = true;
+            document.onmousemove = function(event) {
+                if (isDragging) {
+                    const containerRect = container.getBoundingClientRect();
+                    let newLeft = event.clientX - containerRect.left - draggable.offsetWidth / 2;
+
+                    let closestPosition = positions[0];
+                    let closestDistance = Math.abs(newLeft - positions[0]);
+                    for (let pos of positions) {
+                        let distance = Math.abs(newLeft - pos);
+                        if (distance &lt; closestDistance) {
+                            closestPosition = pos;
+                            closestDistance = distance;
+                        }
+                    }
+                    draggable.style.left = closestPosition + 'px';
+                }
+            };
+        };</code></pre>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Chess Players -->
+                <article class="advanced-project-card reveal" data-category="courses">
+                    <div class="project-preview">
+                        <img src="Chess.jpeg" alt="Chess Players Preview" class="preview-img">
+                        <div class="project-links">
+                        <a href="https://misha1290.github.io/Practical_robot_No.7/" class="btn-primary hover-target" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+                        <a href="https://github.com/misha1290/Practical_robot_No.7" class="btn-secondary hover-target" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <span class="category">Kursprojekt / Information</span>
+                        <h3>Greatest Chess Players</h3>
+                        <p class="tech-stack">HTML5 • CSS Layouts • Anchor Navigation</p>
+                        <p class="description">
+                        Eine strukturierte Informationswebseite, die die Biografien der größten Schachspieler der Geschichte detailliert beschreibt. Das Projekt betont saubere Typografie, semantische Strukturierung und effektive In-Page-Navigation mithilfe von Anker-Links.
+                        </p>
+
+                        <div class="features-block">
+                        <h4>Wichtige technische Highlights:</h4>
+                        <ul>
+                            <li><strong>Fixierte Sidebar-Navigation:</strong> Implementierung eines persistenten Seitenmenüs mit CSS Fixed Positioning, das es Benutzern ermöglicht, schnell zwischen verschiedenen Spielerbiografien zu springen.</li>
+                            <li><strong>Semantischer HTML-Fluss:</strong> Nutzung von Struktur-Tags zur logischen Organisation von Inhalten für bessere Barrierefreiheit und SEO-Indizierung.</li>
+                            <li><strong>Responsive Layout-Anpassungen:</strong> Konfiguration von Media Queries, um die Sidebar auf kleineren Bildschirmen auszublenden und sicherzustellen, dass der Hauptinhalt auf mobilen Geräten lesbar bleibt.</li>
+                        </ul>
+                        </div>
+
+                        <div class="code-viewer">
+                        <div class="code-header">
+                            <div class="mac-btns">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            </div>
+                            <span class="filename">style.css</span>
+                        </div>
+                        <pre><code>/* Responsive Sidebar Navigation */
+        .minu{
+        position: fixed;
+        text-align: center;
+        border: thick solid black;
+        width: 190px;
+        height: 520px;
+        left: 30px;
+        }
+
+        @media screen and (max-width: 906px) {
+        .minu{
+            display: none;
+        }
+        .section{
+            padding-left: 0px;
+        }
+        }</code></pre>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- DECBASE -->
+                <article class="advanced-project-card reveal" data-category="courses work">
+                    <div class="project-preview">
+                        <img src="DECBASE.jpeg" alt="DECBASE Preview" class="preview-img">
+                        <div class="project-links">
+                        <a href="https://misha1290.github.io/DECBASE/" class="btn-primary hover-target" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+                        <a href="https://github.com/misha1290/DECBASE" class="btn-secondary hover-target" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <span class="category">Kurse / Architektur Landing</span>
+                        <h3>DECBASE Interior Design</h3>
+                        <p class="tech-stack">SCSS • Bootstrap 5 • HTML Dialog</p>
+                        <p class="description">
+                        Eine umfassende, stark stilistisierte Landing Page für ein Innenarchitekturbüro. Dieses Projekt demonstriert die Fähigkeit, externe Frameworks zu integrieren und gleichzeitig eine starke, benutzerdefinierte Styling-Architektur beizubehalten.
+                        </p>
+
+                        <div class="features-block">
+                        <h4>Wichtige technische Highlights:</h4>
+                        <ul>
+                            <li><strong>Native Dialog Modals:</strong> Nutzung des nativen HTML-Dialog-Elements in Kombination mit Inline-JavaScript, um komplexe Overlay-Bildschirme ohne schwere externe Skripte zu verwalten.</li>
+                            <li><strong>Framework-Integration:</strong> Verwendung einer beliebten CSS-Bibliothek zur schnellen Implementierung robuster Komponenten, insbesondere von responsiven Karussells für Kundenreferenzen.</li>
+                            <li><strong>Erweiterte CSS-Architektur:</strong> Organisation von Stilen mithilfe von erweitertem Nesting und Pseudo-Elementen zur Erstellung komplexer UI-Muster wie animierter mobiler Burger-Menüs.</li>
+                        </ul>
+                        </div>
+
+                        <div class="code-viewer">
+                        <div class="code-header">
+                            <div class="mac-btns">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            </div>
+                            <span class="filename">index.html</span>
+                        </div>
+                        <pre><code>&lt;!-- Native HTML5 Dialog Implementation --&gt;
+        &lt;button class="best-button-open sub-button" onclick="document.querySelector('.best-modal').showModal()"&gt;CONTINUE READING&lt;/button&gt;
+
+        &lt;dialog class="best-modal"&gt;
+        &lt;h1 class="modal-title"&gt;More information&lt;/h1&gt;
+        &lt;p class="modal-text"&gt;Detailed content goes here...&lt;/p&gt;
+        &lt;img class="modal-img" src="./image/img1.jpg" alt="error"&gt;
+        &lt;button class="best-button-close" onclick="document.querySelector('.best-modal').close()"&gt;Exit&lt;/button&gt;
+        &lt;/dialog&gt;</code></pre>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
